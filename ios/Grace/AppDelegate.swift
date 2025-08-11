@@ -2,6 +2,7 @@ import UIKit
 import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
+import HealthKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +10,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var reactNativeDelegate: ReactNativeDelegate?
   var reactNativeFactory: RCTReactNativeFactory?
+  
+  // Add HealthKit store
+  let healthStore = HKHealthStore()
 
   func application(
     _ application: UIApplication,
@@ -28,6 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       in: window,
       launchOptions: launchOptions
     )
+    
+    // Initialize HealthKit if available
+    if HKHealthStore.isHealthDataAvailable() {
+      print("HealthKit is available")
+    }
 
     return true
   }

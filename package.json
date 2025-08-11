@@ -7,16 +7,28 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf node_modules && rm -rf ios/build && rm -rf android/build && npm install",
+    "pod-install": "cd ios && pod install && cd .."
   },
   "dependencies": {
+    "@kingstinct/react-native-healthkit": "^8.5.0",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-voice/voice": "^3.2.4",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.2",
+    "react-native-apple-healthkit": "^0.2.1",
+    "react-native-health": "^1.19.0",
+    "react-native-health-connect": "^3.3.2",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-svg": "^15.11.2",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "@babel/runtime": "^7.25.0",
+    "@babel/runtime": "^7.27.1",
+    "@bam.tech/react-native-make": "^3.0.3",
     "@react-native-community/cli": "18.0.0",
     "@react-native-community/cli-platform-android": "18.0.0",
     "@react-native-community/cli-platform-ios": "18.0.0",

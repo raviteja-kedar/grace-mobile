@@ -1,6 +1,26 @@
-pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+pluginManagement { 
+  includeBuild("../node_modules/@react-native/gradle-plugin") 
+  
+  // Apply our system_init.gradle to set properties early
+  apply from: file("system_init.gradle")
+}
+
 plugins { id("com.facebook.react.settings") }
 extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
 rootProject.name = 'Grace'
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
+
+// Include problematic native modules explicitly
+include ':@react-native-async-storage_async-storage'
+project(':@react-native-async-storage_async-storage').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-async-storage/async-storage/android')
+
+include ':react-native-safe-area-context'
+project(':react-native-safe-area-context').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-safe-area-context/android')
+
+include ':react-native-svg'
+project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
+
+// Add react-native-health-connect for auto-linking
+include ':react-native-health-connect'
+project(':react-native-health-connect').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-health-connect/android')

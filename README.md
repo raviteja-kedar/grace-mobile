@@ -1,59 +1,144 @@
-# Services
+# Grace - iOS HealthKit Integration
 
-This directory contains services for accessing platform-specific features in a consistent way.
+This project uses a custom native implementation to integrate with Apple HealthKit, providing robust access to health data in a React Native application.
 
-## Directory Structure
+## Why Custom Native Integration?
 
-- `/common`: Platform-agnostic adapters and handlers
-- `/ios`: iOS-specific service implementations
-- `/android`: Android-specific service implementations
+### 🧩 Custom Native Module Approach
 
-## Health Services
+We've chosen to implement a custom Swift module to interact with HealthKit for several reasons:
 
-The Health Services provide access to health data on iOS (via HealthKit) and Android (via Health Connect).
+1. **Full Control**: Direct access to all HealthKit features without limitations of third-party libraries
+2. **Performance**: Native code execution for optimal performance
+3. **Future-Proof**: Easy to update for new iOS/HealthKit features
+4. **Specificity**: Tailored to our exact needs without unnecessary code
+5. **Reliability**: No dependency on external library maintenance
 
-### Usage
+## Project Structure
+
+### Native iOS Files
+
+- `ios/Grace/HealthKit/IOSHealthKitManager.swift` - Swift implementation of HealthKit functionality
+- `ios/Grace/HealthKit/IOSHealthKitManager.m` - Objective-C bridge to React Native
+- `ios/Grace/HealthKit/GraceHealthKit-Bridging-Header.h` - Swift/Objective-C bridging header
+
+### React Native Files
+
+- `src/services/iOSHealthKit.ts` - TypeScript service for interacting with the native module
+
+## Features
+
+Our custom HealthKit integration provides:
+
+- **Step Counting**: Both total and daily step counts
+- **Active Energy**: Calories burned during exercise
+- **Heart Rate**: Heart rate samples over time
+- **Sleep Analysis**: Sleep tracking data
+- **Background Updates**: Observing changes to health data
+
+## Integration Setup
+
+To set up this integration in your project:
+
+1. **Add files to Xcode project**
+
+   - Create HealthKit group in Xcode
+   - Add Swift and Objective-C files
+   - Set up bridging header
+
+2. **Update Info.plist with HealthKit permissions**
+
+   ```xml
+   <key>NSHealthShareUsageDescription</key>
+   <string>This app requires access to your health data to track fitness and wellness metrics.</string>
+   <key>NSHealthUpdateUsageDescription</key>
+   <string>This app requires permission to save health data to monitor your progress.</string>
+   ```
+
+3. **Enable HealthKit in Capabilities**
+
+   - In Xcode, select your target
+   - Go to "Signing & Capabilities"
+   - Add HealthKit capability
+
+4. **Link HealthKit Framework**
+   - Ensure HealthKit.framework is linked in "Build Phases" > "Link Binary With Libraries"
+
+## Usage Examples
+
+### Request Authorization
 
 ```typescript
-import {HealthAdapter} from 'src/services';
+import iOSHealthKit from '../services/iOSHealthKit';
 
-// Check if health data is available
-const available = await HealthAdapter.isAvailable();
-
-// Request permissions
-const granted = await HealthAdapter.requestAuthorization();
-
-// Get step count
-const steps = await HealthAdapter.getStepCount(startDate, endDate);
+// Request authorization
+const requestPermissions = async () => {
+  const isAvailable = await iOSHealthKit.isAvailable();
+  if (isAvailable) {
+    const authGranted = await iOSHealthKit.requestAuthorization();
+    console.log('HealthKit auth granted:', authGranted);
+  }
+};
 ```
 
-## Platform-Specific Services
-
-If you need to access platform-specific functionality directly:
+### Getting Step Count Data
 
 ```typescript
-import {Platform} from 'react-native';
-import {iOSHealthKit, AndroidHealthService} from 'src/services';
+import iOSHealthKit from '../services/iOSHealthKit';
 
-if (Platform.OS === 'ios') {
-  // Use iOS-specific functionality
-  const available = await iOSHealthKit.isAvailable();
-} else if (Platform.OS === 'android') {
-  // Use Android-specific functionality
-  const available = await AndroidHealthService.isAvailable();
-}
+// Get step count for today
+const getStepsToday = async () => {
+  const now = new Date();
+  const startOfDay = new Date(now);
+  startOfDay.setHours(0, 0, 0, 0);
+
+  const steps = await iOSHealthKit.getStepCount(startOfDay, now);
+  console.log('Steps today:', steps);
+};
+
+// Get daily step counts for the last week
+const getWeeklySteps = async () => {
+  const now = new Date();
+  const weekAgo = new Date();
+  weekAgo.setDate(now.getDate() - 7);
+
+  const dailySteps = await iOSHealthKit.getDailyStepCounts(weekAgo, now);
+  console.log('Weekly steps:', dailySteps);
+};
 ```
 
-## Implementation Details
+### Heart Rate Monitoring
 
-- All services follow a similar interface for consistency
-- Platform detection is handled automatically
-- Error handling and logging is consistent across platforms
+```typescript
+import iOSHealthKit from '../services/iOSHealthKit';
 
-## Adding New Services
+// Get heart rate data for the past hour
+const getRecentHeartRate = async () => {
+  const now = new Date();
+  const hourAgo = new Date();
+  hourAgo.setHours(now.getHours() - 1);
 
-When adding new services, follow this structure:
+  const heartRates = await iOSHealthKit.getHeartRateSamples(hourAgo, now);
+  console.log('Recent heart rates:', heartRates);
+};
+```
 
-1. Create platform-specific implementations in the respective folders
-2. Create a platform-agnostic adapter in the `/common` directory
-3. Export the adapter from the main `index.ts` file
+### Sleep Analysis
+
+```typescript
+import iOSHealthKit from '../services/iOSHealthKit';
+
+// Get sleep data for last night
+const getLastNightSleep = async () => {
+  const now = new Date();
+  const yesterday = new Date();
+  yesterday.setDate(now.getDate() - 1);
+
+  const sleepData = await iOSHealthKit.getSleepAnalysis(yesterday, now);
+  console.log('Sleep data:', sleepData);
+};
+```
+
+## License
+
+[Your License Information]

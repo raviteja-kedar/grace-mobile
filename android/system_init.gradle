@@ -1,0 +1,14 @@
+// Hook into Gradle initialization to set system properties before
+// any React Native initialization starts
+gradle.projectsLoaded {
+    try {
+        // Disable all the problematic features that cause crashes
+        System.setProperty("react.internal.featureflags.useBridgelessArchitecture", "false")
+        System.setProperty("com.facebook.react.ReactInstanceManager.useBridgelessArchitecture", "false")
+        System.setProperty("react.native.dev.featureflags", "false")
+        
+        println("Successfully set system properties to disable React Native features that cause crashes")
+    } catch (Exception e) {
+        println("Error setting system properties: " + e.getMessage())
+    }
+} 

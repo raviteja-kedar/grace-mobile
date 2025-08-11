@@ -39,6 +39,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>arm64</string>
+		<string>healthkit</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -48,5 +49,16 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Grace needs access to read your step count, active energy, heart rate, and sleep data to help you track your health metrics and provide insights about your daily activity and rest patterns.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Grace needs permission to write health data to keep track of your progress and help you maintain your health goals.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Grace needs access to speech recognition to convert your voice to text.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Grace needs access to your microphone to record your voice for speech recognition.</string>
+	<key>UIAppFonts</key>
+	<array>
+	</array>
 </dict>
 </plist>

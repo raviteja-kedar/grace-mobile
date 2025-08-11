@@ -1,0 +1,459 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.2",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".bundle/config",
+        "hash": "9116505824108018199"
+      },
+      {
+        "file": ".eslintrc.js",
+        "hash": "17354359792012622799"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5050593768160088275"
+      },
+      {
+        "file": ".prettierrc.js",
+        "hash": "3440885991993665354"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "14751646031345225185"
+      },
+      {
+        "file": ".watchmanconfig",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "App.tsx",
+        "hash": "3872004910239086402"
+      },
+      {
+        "file": "Gemfile",
+        "hash": "12884890766378124899"
+      },
+      {
+        "file": "Gemfile.lock",
+        "hash": "12317358690668591561"
+      },
+      {
+        "file": "README.md",
+        "hash": "2917946861046251959"
+      },
+      {
+        "file": "__tests__/App.test.tsx",
+        "hash": "10792233639728460309"
+      },
+      {
+        "file": "android/app/build.gradle",
+        "hash": "156524904862113780"
+      },
+      {
+        "file": "android/app/debug.keystore",
+        "hash": "5037686243849261810"
+      },
+      {
+        "file": "android/app/proguard-rules.pro",
+        "hash": "16514784075870288842"
+      },
+      {
+        "file": "android/app/src/debug/AndroidManifest.xml",
+        "hash": "9217300540490017338"
+      },
+      {
+        "file": "android/app/src/main/AndroidManifest.xml",
+        "hash": "14922660351500674284"
+      },
+      {
+        "file": "android/app/src/main/java/com/grace/HealthConnectModule.kt",
+        "hash": "16284662692215646605"
+      },
+      {
+        "file": "android/app/src/main/java/com/grace/HealthConnectPackage.kt",
+        "hash": "14564638714675768835"
+      },
+      {
+        "file": "android/app/src/main/java/com/grace/MainActivity.kt",
+        "hash": "9020058420894494591"
+      },
+      {
+        "file": "android/app/src/main/java/com/grace/MainApplication.kt",
+        "hash": "7734492600545342818"
+      },
+      {
+        "file": "android/app/src/main/res/drawable/heart_icon.xml",
+        "hash": "6790322724530220315"
+      },
+      {
+        "file": "android/app/src/main/res/drawable/ic_launcher_foreground.xml",
+        "hash": "16939082918937214110"
+      },
+      {
+        "file": "android/app/src/main/res/drawable/rn_edit_text_material.xml",
+        "hash": "4466596183044014152"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "hash": "6094384265465677595"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "hash": "6094384265465677595"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "hash": "10788509195642110029"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+        "hash": "14348562046770238248"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "hash": "328692529308011025"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+        "hash": "11802043336826859502"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "hash": "13006206334539413900"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+        "hash": "1812825738055967771"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "hash": "6104457872863500683"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+        "hash": "2478168592410677995"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "hash": "12283149652938275290"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+        "hash": "7126668675123994836"
+      },
+      {
+        "file": "android/app/src/main/res/values/ic_launcher_background.xml",
+        "hash": "4851579334807092269"
+      },
+      {
+        "file": "android/app/src/main/res/values/strings.xml",
+        "hash": "17816057221566963128"
+      },
+      {
+        "file": "android/app/src/main/res/values/styles.xml",
+        "hash": "14052910750539201041"
+      },
+      {
+        "file": "android/build.gradle",
+        "hash": "17659754690079204189"
+      },
+      {
+        "file": "android/gradle.properties",
+        "hash": "9355241432279512106"
+      },
+      {
+        "file": "android/gradle/wrapper/gradle-wrapper.jar",
+        "hash": "9604422019378236896"
+      },
+      {
+        "file": "android/gradle/wrapper/gradle-wrapper.properties",
+        "hash": "5511192720181303110"
+      },
+      {
+        "file": "android/gradlew",
+        "hash": "670712297527443547"
+      },
+      {
+        "file": "android/gradlew.bat",
+        "hash": "3049992198610835351"
+      },
+      {
+        "file": "android/settings.gradle",
+        "hash": "18215573884012813379"
+      },
+      {
+        "file": "android/system_init.gradle",
+        "hash": "13963960664950894198"
+      },
+      {
+        "file": "app.json",
+        "hash": "9502626829710559244"
+      },
+      {
+        "file": "babel.config.js",
+        "hash": "17506418141289760001"
+      },
+      {
+        "file": "generate-ios-icons.js",
+        "hash": "9714011488609155699"
+      },
+      {
+        "file": "generate_ios_icons.sh",
+        "hash": "15281486097012131339"
+      },
+      {
+        "file": "index.js",
+        "hash": "10379638874065513270"
+      },
+      {
+        "file": "ios/.xcode.env",
+        "hash": "2240437479405059044"
+      },
+      {
+        "file": "ios/Grace.xcodeproj/project.pbxproj",
+        "hash": "3178238261798865663"
+      },
+      {
+        "file": "ios/Grace.xcodeproj/xcshareddata/xcschemes/Grace.xcscheme",
+        "hash": "16694608184422289975"
+      },
+      {
+        "file": "ios/Grace.xcworkspace/contents.xcworkspacedata",
+        "hash": "9328148085917081389"
+      },
+      {
+        "file": "ios/Grace/AppDelegate.swift",
+        "hash": "10730843219396722909"
+      },
+      {
+        "file": "ios/Grace/Grace.entitlements",
+        "hash": "493069932934043145"
+      },
+      {
+        "file": "ios/Grace/HealthKit/GraceHealthKit-Bridging-Header.h",
+        "hash": "2083569840879326931"
+      },
+      {
+        "file": "ios/Grace/HealthKit/IOSHealthKitManager.m",
+        "hash": "15932177179322859167"
+      },
+      {
+        "file": "ios/Grace/HealthKit/IOSHealthKitManager.swift",
+        "hash": "10960882629419923092"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/Contents.json",
+        "hash": "6398239324172463602"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-1024.png",
+        "hash": "3899267732796540329"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-20@2x.png",
+        "hash": "7735190735738670477"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-20@3x.png",
+        "hash": "2507037491303415081"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-29@2x.png",
+        "hash": "1027836547000847104"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-29@3x.png",
+        "hash": "17022550894004309262"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-40@2x.png",
+        "hash": "2270518451771240662"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-40@3x.png",
+        "hash": "6706164534590972516"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-60@2x.png",
+        "hash": "6706164534590972516"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/AppIcon.appiconset/icon-60@3x.png",
+        "hash": "12985904675792085785"
+      },
+      {
+        "file": "ios/Grace/Images.xcassets/Contents.json",
+        "hash": "10114040536141029740"
+      },
+      {
+        "file": "ios/Grace/Info.plist",
+        "hash": "2082656878166556925"
+      },
+      {
+        "file": "ios/Grace/LaunchScreen.storyboard",
+        "hash": "1068693847260733902"
+      },
+      {
+        "file": "ios/Grace/PrivacyInfo.xcprivacy",
+        "hash": "16670914145149810597"
+      },
+      {
+        "file": "ios/Podfile",
+        "hash": "13927788199349775475"
+      },
+      {
+        "file": "ios/Podfile.lock",
+        "hash": "14157773519224943341"
+      },
+      {
+        "file": "ios/tmp/add_healthkit.rb",
+        "hash": "1398856955086087797"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "3450453734004767423"
+      },
+      {
+        "file": "metro.config.js",
+        "hash": "10662824241545269552"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6071556250925129757"
+      },
+      {
+        "file": "package.json",
+        "hash": "13059486358892871666"
+      },
+      {
+        "file": "react-native.config.js",
+        "hash": "6223523812023673582"
+      },
+      {
+        "file": "rebuild-ios.sh",
+        "hash": "9464441033444500755"
+      },
+      {
+        "file": "src/assets/icon.svg",
+        "hash": "826535553762822514"
+      },
+      {
+        "file": "src/assets/images/health-icon.png",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/ios_icon.svg",
+        "hash": "12266661457826340094"
+      },
+      {
+        "file": "src/components/PermissionScreen.tsx",
+        "hash": "12638205912841251805"
+      },
+      {
+        "file": "src/components/SplashScreen.tsx",
+        "hash": "14856321133072561608"
+      },
+      {
+        "file": "src/components/VitalsDashboard.tsx",
+        "hash": "18312421301831965979"
+      },
+      {
+        "file": "src/components/common/Button.tsx",
+        "hash": "643561140367160808"
+      },
+      {
+        "file": "src/components/common/CaringHandsAnimation.tsx",
+        "hash": "10987233717047646798"
+      },
+      {
+        "file": "src/components/common/DateRangePicker.tsx",
+        "hash": "8670075213158866573"
+      },
+      {
+        "file": "src/components/common/GeometricNetwork.tsx",
+        "hash": "612756843960553527"
+      },
+      {
+        "file": "src/components/common/Spinner.tsx",
+        "hash": "5771827909205388339"
+      },
+      {
+        "file": "src/components/common/index.ts",
+        "hash": "15010969808854804367"
+      },
+      {
+        "file": "src/components/index.ts",
+        "hash": "9171883218247232433"
+      },
+      {
+        "file": "src/config/HealthConfig.ts",
+        "hash": "4622998517366570607"
+      },
+      {
+        "file": "src/hooks/useHealthData.ts",
+        "hash": "2083045585768189880"
+      },
+      {
+        "file": "src/hooks/useHealthDataAndroid.ts",
+        "hash": "12359559160157655114"
+      },
+      {
+        "file": "src/hooks/useHealthDataIOS.ts",
+        "hash": "7047700798614441438"
+      },
+      {
+        "file": "src/screens/HomeScreen.tsx",
+        "hash": "10884164948219890307"
+      },
+      {
+        "file": "src/services/HealthAdapter.ts",
+        "hash": "1356306932416283852"
+      },
+      {
+        "file": "src/services/HealthService.ts",
+        "hash": "18019470706503309914"
+      },
+      {
+        "file": "src/services/README.md",
+        "hash": "3005379883847940323"
+      },
+      {
+        "file": "src/services/android/AndroidHealthService.ts",
+        "hash": "6993561917734737110"
+      },
+      {
+        "file": "src/services/index.ts",
+        "hash": "2769329136873574399"
+      },
+      {
+        "file": "src/services/ios/HealthKit.md",
+        "hash": "15107121849528351251"
+      },
+      {
+        "file": "src/services/ios/HealthKitKingstinct.ts",
+        "hash": "9131921300698197014"
+      },
+      {
+        "file": "src/services/ios/iOSHealthKit.ts",
+        "hash": "8965667529429909937"
+      },
+      {
+        "file": "src/styles/theme.ts",
+        "hash": "364212177398789314"
+      },
+      {
+        "file": "src/types/react-native-health-connect.d.ts",
+        "hash": "2797782855262364325"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1017391233137788567"
+      }
+    ]
+  }
+}
